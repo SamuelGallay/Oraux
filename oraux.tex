@@ -16,6 +16,10 @@
 
 \vspace{5px}
 
+Disclaimer : je sais, je rédige ce truc n'importe comment...
+
+\vspace{5px}
+
 Je suis arrivé à Paris dimanche en début d'après-midi, et j'ai fait une visite complète du 5ième arrondissement. Il fait relativement chaud pour Paris, surtout la nuit...
 
 \vspace{5px}
@@ -28,4 +32,13 @@ J'ai commencé par dire des choses intelligentes, mais l'examinateur s'est rendu
 
 Bon, je suis très déçu de moi sur ce coup là, d'habitude j'arrive à sauver les meubles pendant mes oraux de physique...
 
+\vspace{5px}
+
+Oral de Mathématiques, Ulm. Qu'est-ce que c'était mieux que mon oral de physique !
+
+Démonstration sympathique du théorème de Cayley-Hamilton : prenez $A \in M_n(C)$ et $P\in C[X]$ le polynôme caractéristique de $A$, et calculez de deux manières différentes, pour $r$ assez grand, l'intégrale matricielle (coefficients par coefficients) $$I = \int_0^{2\pi} r e^{i\theta}P(re^{i\theta})(A-re^{i\theta}I_n)^{-1}d\theta$$ 
+
+Je conseille de le chercher un peu tout seul... L'examinateur était au début assez sec et l'élève avant moi m'a souhaité bon courage avec une tête terrorisée. Il ne fallait juste pas se laisser démonter, il m'a donné des indications régulièrement, quand je bloquais. Il m'a surtout signalé les petites erreurs de calcul (j'en ai fait trop souvent). L'oral à commencé en retard et terminé en avance... j'ai le sentiment que l'examinateur avait déjà une certaine lassitude des oraux, j'étais le dernier de la journée.
+
+Quelques indications (essayez sans, ça doit être à peu près possible d'avancer seul). D'abord pour $r$ grand $(A - re^{i\theta})$ est inversible car le polynôme caractéristique possède un nombre fini de racines. Ensuite, pour le premier calcul de I, on considère P comme un polynôme quelconque. On factorise par $-re^{i\theta}$ le terme matriciel, on l'écrit comme une série entière. J'ai dû discuter avec la norme triple : définition, pourquoi ai-je choisi celle-là... On inverse la série et l'intégrale : on l'a fait un peu vite à mon goût, mais la somme des intégrales des normes des fonctions de $\theta$ convergent. On calcule l'intégrale, d'abord le cas des monômes, linéarité, et on trouve $2\pi P(A)$ (j'ai un doute sur le signe, mais on se fiche un peu de la constante). Pour le second calcul de $I$, définition du polynôme caractéristique, comatrice, et calcul coefficient par coefficient (l'intégrale est matricielle). Le déterminant qui apparait dans les coefficients de la comatrice est un polynôme en $e^{i\theta}$. Donc l'intérieur des intégrales coeff par coeff sont des polynômes en $e^{i\theta}$ dont le coefficient constant est nul. Par un des calculs précédent $I = 0$.
 \end{document}
