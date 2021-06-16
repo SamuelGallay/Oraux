@@ -2,29 +2,23 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern} 
-\usepackage{xspace}
-\usepackage[main=french]{babel}
 
-\title{Oraux}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{parskip}
+
+\usepackage[french]{babel}
+
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=0.7in,rmargin=0.7in}
+
+\title{\textbf{Oraux des ENS}}
 \author{Samuel Gallay}
 
 \begin{document}
 \maketitle
 
-\emph{Oraux des ENS}
-
-\vspace{5px}
-
-Disclaimer : je sais, je rédige ce truc n'importe comment...
-
-\vspace{5px}
-
-Je suis arrivé à Paris dimanche en début d'après-midi, et j'ai fait une visite complète du 5ième arrondissement. Il fait relativement chaud pour Paris, surtout la nuit...
-
-\vspace{5px}
-
-Oral de Physique pour Lyon, Cachan et Rennes : une catastrophe...
+\section*{Physique (LCR)}
 
 45 minutes, pas de préparation : On considère un condensateur cylindrique de hauteur $L$ dirigé selon l'axe $e_z$ avec le bas du condensateur en $z = 0$, de rayons intérieur et extérieurs $r_1$ et $r_2$. On se place dans l'ARQS, la charge dépendant du temps, et on demande d'abord de calculer la puissance dissipée (ie le flux du vecteur de Poynting) à travers la surface $z = L$.
 
@@ -32,13 +26,43 @@ J'ai commencé par dire des choses intelligentes, mais l'examinateur s'est rendu
 
 Bon, je suis très déçu de moi sur ce coup là, d'habitude j'arrive à sauver les meubles pendant mes oraux de physique...
 
-\vspace{5px}
-
-Oral de Mathématiques, Ulm. Qu'est-ce que c'était mieux que mon oral de physique !
+\section*{Mathématiques (U)}
+Qu'est-ce que c'était mieux que mon oral de physique !
 
 Démonstration sympathique du théorème de Cayley-Hamilton : prenez $A \in M_n(C)$ et $P\in C[X]$ le polynôme caractéristique de $A$, et calculez de deux manières différentes, pour $r$ assez grand, l'intégrale matricielle (coefficients par coefficients) $$I = \int_0^{2\pi} r e^{i\theta}P(re^{i\theta})(A-re^{i\theta}I_n)^{-1}d\theta$$ 
 
 Je conseille de le chercher un peu tout seul... L'examinateur était au début assez sec et l'élève avant moi m'a souhaité bon courage avec une tête terrorisée. Il ne fallait juste pas se laisser démonter, il m'a donné des indications régulièrement, quand je bloquais. Il m'a surtout signalé les petites erreurs de calcul (j'en ai fait trop souvent). L'oral à commencé en retard et terminé en avance... j'ai le sentiment que l'examinateur avait déjà une certaine lassitude des oraux, j'étais le dernier de la journée.
 
 Quelques indications (essayez sans, ça doit être à peu près possible d'avancer seul). D'abord pour $r$ grand $(A - re^{i\theta})$ est inversible car le polynôme caractéristique possède un nombre fini de racines. Ensuite, pour le premier calcul de I, on considère P comme un polynôme quelconque. On factorise par $-re^{i\theta}$ le terme matriciel, on l'écrit comme une série entière. J'ai dû discuter avec la norme triple : définition, pourquoi ai-je choisi celle-là... On inverse la série et l'intégrale : on l'a fait un peu vite à mon goût, mais la somme des intégrales des normes des fonctions de $\theta$ convergent. On calcule l'intégrale, d'abord le cas des monômes, linéarité, et on trouve $2\pi P(A)$ (j'ai un doute sur le signe, mais on se fiche un peu de la constante). Pour le second calcul de $I$, définition du polynôme caractéristique, comatrice, et calcul coefficient par coefficient (l'intégrale est matricielle). Le déterminant qui apparait dans les coefficients de la comatrice est un polynôme en $e^{i\theta}$. Donc l'intérieur des intégrales coeff par coeff sont des polynômes en $e^{i\theta}$ dont le coefficient constant est nul. Par un des calculs précédent $I = 0$.
+
+\section*{TIPE (ULCR)}
+
+L'oral s'est très bien passé, j'avais deux examinateurs, un homme et une femme. Le monsieur connaissait assez bien le langage Prolog (pari gagné !). Je pense qu'ils avaient parcouru assez vite mon rapport, mais ils s'y étaient intéressés. L'oral s'est déroulé comme une alternance d'exposé et de questions. J'avais un diaporama, et ils avaient le rapport sous les yeux. Certaines questions étaient posées pour me tester comme \emph{qu'est-ce que vous pouvez me dire sur les grammaires ? Non contextuelles ? LL(1) ? Compilation vers un automate ?} Des questions sur les choix de la représentation des données, des parcours... D'autres questions étaient plutôt de la curiosité : \emph{J'aime beaucoup le Prolog, mais pourquoi avez vous décidé de travailler sur Prolog ?} Des discussions sur la compilation de Prolog, et sur différentes extensions : le \emph{cut} (ça allait) et sur la métaprogrammation avec les \emph{assert}. Là je n'y connsissais rien, mais il fallait souligner la difficulté de compiler le assert par rapport à l'interpréter...
+
+\section*{Informatique (LCR)}
+
+\section*{Mathématiques (CR)}
+
+\section*{Divagations parisiennes}
+
+Il fait chaud dans Paris, surtout dans un studio sous les toits. Il n'y a pas d'insectes et on ne voit pas les étoiles parce que la nuit il fait comme jour dehors.
+
+\section*{Dimanche}
+
+Je suis arrivé à Paris dimanche en début d'après-midi, et j'ai fait une visite complète du 5ième arrondissement. J'ai juste voulu prendre mes premiers repères : la rue Lhomond et la rue d'Ulm, Henri IV, Louis le Grand, le collège de France, le Panthéon, le Luxembourg et le jardin des plantes. J'ai fait des courses, j'aime bien la rue Mouffetard et je loge dans le quartier des Gobelins, ce qui est très pratique pour passer des oraux.
+
+\section*{Lundi}
+
+Après mon oral de physique raté je suis allé faire une sieste. L'oral de maths s'est mieux passé, donc je suis allé me promener. Je suis allé voir Jussieu, Nôtre-Dame, le Louvre, les Tuileries jusqu'à l'obélisque, puis le bord de la Seine jusqu'à la tour Eiffel et le Champ-de-Mars. Je suis rentréen métro : j'ai eu le droit à un panne de courant de la part de la RATP (heureusement j'étais à quai). J'ai pu avoir un apreçu du célèbre esprit lutécien, et j'ai improvisé un itinéraire alternatif.
+
+\includegraphics[scale=0.65]{asterix.jpg}
+
+\section*{Mardi}
+
+J'ai passé l'après-midi avec un ami de lycée, qui passe aussi les concours, on est allé manger une glace au jardin des Plantes (il fait vraiment chaud). Le soir mon autre amie de lycée qui me prête généreusement son studio est rentrée à Paris.
+
+\section*{Mercredi}
+
+À venir...
+
 \end{document}
