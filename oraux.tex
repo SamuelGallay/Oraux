@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{xspace}
 \usepackage{parskip}
+\usepackage{amssymb}
 
 \usepackage[french]{babel}
 
@@ -41,7 +42,48 @@ L'oral s'est très bien passé, j'avais deux examinateurs, un homme et une femme
 
 \section*{Informatique (LCR)}
 
+Je suis très déçu de cet oral d'informatique. C'est avec celui-ci que je jouais mon admission aux ENS de Saclay et Rennes, le coefficient étant bien plus élevé que celui de physique par exemple, et j'ai perdu (je n'ai rien fait seul dans le sujet, et je devais paraître ralenti...) J'avais révisé des sujets, cela ne m'a servi à rien. J'espère que l'info d'Ulm sera plus intéressante.
+
+L'oral consiste en 30 minutes de préparation et 30 minutes de passage. On considère un ensemble $A$ possèdant une loi associative et commutative (notée multiplicativement), et on s'intéresse au calcul des puissance d'un élément $x$ de cet ensemble.
+
+Pour formaliser le coût du calcul, on s'autorise deux règles de production sur une partie $\Gamma$ de $A$. La première produit l'élément $x$ à partir de $\varnothing$. La seconde prend deux éléments de $x^i$ et $x^j$ dans $\Gamma$ et produit $\Gamma \cup \{x^{i+j}\}$
+
+Exemple d'un calcul de $x^7$ avec ce formalisme :
+
+$$\varnothing \longrightarrow \{x\}\longrightarrow \{x, x^2\} \longrightarrow \{x, x^2, x^4\}\longrightarrow \{x, x^2, x^4, x^6\}\longrightarrow \{x, x^2, x^4, x^6, x^7\}$$
+
+On définit le coût de calcul $C(n)$ de $x^n$ comme le nombre minimal de flèches nécessaires pour créer $x^n$ à partir de $\varnothing$. Avec cet exemple, $C(7) \le 5$.
+
+Les questions. Montrez que $C(n) \le n$. Montrez que $C(n) \le 2\lfloor \log_2{n}  \rfloor$.
+
+Déjà cette question était mal fichue, cette inégalité n'est pas vraie pour des petits entiers, comme 7 par exemple (si je ne me plante pas)... Ce n'est pas une très grosse erreur d'énoncé, mais c'est embêtant si on veut initialiser une récurrence, ou si on cherche des exemples sur des petits entiers... Un sujet de concours ne devrait pas contenir d'erreur, c'est déjà assez de la loterie comme ça !
+
+Montrez que l'algorithme trouvé à la question précedente n'est pas optimal. (L'algo de la question précédente est l'exponentiation rapide, et de mauvais cas sont les $2^n-1$ par exemple.)
+
+Montrez que $\lceil \log_2(n)\rceil \le C(n)$.
+
+Montrez que $C(n)$ est équivalent à $\log_2(n)$ quand $n\rightarrow +\infty$.
+
+Exposez un algorithme utilisant la décomposition en facteurs premiers de $n$. Montrez que cet algorithme peut-être meilleur et moins bon dans une infinité de cas que celui proposé en $2\lfloor \log_2(n) \rfloor$.
+
+On définit ensuite les \emph{power trees} de \textsc{Knuth} et on demande de construire un meilleur algorithme.
+
 \section*{Mathématiques (CR)}
+
+On se place dans un convexe $A$ de $\mathbb{C}$, et on considère une fonction $f$ de $A$ dans $\mathbb{C}$ telle que $$ \lim_{z\rightarrow z_0}{\frac{f(z) - f(z_0)}{z - z_0}} $$ existe. On montre d'abord que $f$ est continue, puis que $f$ est différentiable. Ensuite on considère un chemin continu et $C^1$ par morceaux $\gamma : [a, b] \rightarrow A$, tel que $\gamma(a) = \gamma(b)$. On montre que $$\int_a^bf(\gamma(t))\gamma'(t)dt = 0$$ Enfin, avec les mêmes hypothèses sur $\gamma$, pour $z$ n'appartenant pas à $\gamma([a, b])$, on pose $$I(z)=\frac{1}{2i\pi}\int_a^b\frac{\gamma'(t)}{\gamma(t)-z}dt$$ Montrez que $I(z)\in\mathbb(Z)$.
+
+L'exercice n'était pas très difficile, mais je n'étais pas assez réveillé pour être rapide et efficace. L'examinatrice était très calme, et m'a donné des indications. Pour la dernière question, on peut introduire $\phi : [a, b] \rightarrow \mathbb{C}$ définie par $$\phi(t) = exp(\int_a^t\frac{\gamma'(s)}{\gamma(s)-z}ds)$$
+J'aurais dû être plus rapide.
+
+\section*{Anglais (XULCR)}
+
+Difficile de dire si cela s'est bien ou mal passé. Mon anglais n'était pas exceptionnel, et il y a des questions sur la vidéo auxquelles je n'ai pas su répondre, mais dans l'ensemble ça reste comme une colle d'anglais. Il y avait deux examinatrices qui posaient les questions à tour de rôle.
+
+La vidéo venait de la chaîne PBS Terra que l'on trouve sur YouTube, et était sur le Cascadia Earthquake. On la retrouve facilement. Je me souviens que la durée était de 6 minutes et quelques secondes. Je pense que c'étaient les premières 6 minutes et 14 secondes sur YouTube (à 10 sec près en tout cas).
+
+\section*{Informatique (U)}
+
+\section*{TP d'algorithmique (ULCR)}
 
 \section*{Divagations parisiennes}
 
@@ -63,6 +105,12 @@ J'ai passé l'après-midi avec un ami de lycée, qui passe aussi les concours, o
 
 \section*{Mercredi}
 
-À venir...
+On est allé mangé au CROUS de Censier pour 1 euro, c'est pas mal. J'ai admiré avec horreur les constructions du plateau de Saclay. Je suis descendu à la station Lozère et je suis monté à l'X. Je voulais voir à quoi tout cela ressemblait. N'allez pas à pieds des écoles X/ENSAE à Centrale/ENS. La ballade prend une petite heure, mais c'est très moche. À vélo ça doit aller (il y a une piste cyclable), mais prenez plutôt le bus comme tout le monde. Je suis rentré dans les bâtiments de centrale, c'est grand mais très vide... Il y a beaucoup de grands bâtiments en travaux sur le plateau. 
+
+\section*{Jeudi}
+
+Je me suis perdu dans l'X. On est allé regarder un film amusant au cinéma du Pnathéon.
+
+\section*{Vendredi}
 
 \end{document}
