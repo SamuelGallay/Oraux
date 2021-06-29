@@ -8,10 +8,14 @@
 \usepackage{xspace}
 \usepackage{parskip}
 \usepackage{amssymb}
+\usepackage{fixltx2e}
 
 \usepackage[french]{babel}
 
 \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=0.7in,rmargin=0.7in}
+
+\renewcommand{\up}{\textsuperscript}
+\newcommand{\dw}{\textsubscript}
 
 \title{\textbf{Mes oraux des concours}}
 \author{Samuel Gallay}
@@ -98,12 +102,49 @@ Tout va bien, les questions étaient prévisibles.
 \section*{Mathématiques I}
 Probas avec des urnes. (pas de préparation)
 \section*{Physique-Chimie II}
-Mécanique avec les masses et les ressorts (avec préparation)
+Mécanique avec les masses et les ressorts (avec préparation). Je pense que Antoine Logerot a eu le même que moi, on peut probablement croiser les sources. Le sujet était long, l'examinateur n'a rien dit du tout, à part tu peux écrire en haut à droite...
+
+Je crois que le contexte était l'étude des tremblements de terre. On considère un système de deux pavés droits de masse $m$, posées sur le sol. On donne le coefficient de frottement $\mu$ entre une masse et le sol (l'axe $O_x$ représente le sol). Les deux masses sont reliées par un ressort de raideur $k$ et de longueur à vide $l_0$. Une force $F$ constante pousse la première masse en direction de la seconde (force de gauche à droite, selon les $x$ croissants). Initialement les deux masses sont écartées de $l_0$, et ont une vitesse initiale nulle.
+
+Quelle est la force $F_{1,min}$ nécessaire pour mettre en mouvement la première masse ? Montrer que si $F \ge 2F_{1, min}$, alors les deux masses sont continuellement en mouvement. Calculer la force $F_{2, min}$ nécessaire pour mettre la seconde masse en mouvement. On suppose que $F_{1, min} < F < F_{2, min}$. Calculer l'énergie dissipée au cours du déplacement. Il y avait ensuite de nombreuses questions Python : on nous donnait des graphes de position, de vitesse, et d'énergie en fonction du temps quand les deux masses sont en mouvement, et on nous demandait de commenter. 
+
+
+
 \section*{Mathématiques II}
 Python, compter des nombres premiers.
 \section*{Anglais}
 \section*{TP Physique-Chimie}
-\section*{Physique-Chimie I}
+
+C'était un TP de chimie, l'épreuve la plus amusante de tous les concours ! Bon, on ne va pas se mentir, l'examinatrice et l'assistante de TP ont dû se demander si j'étais retardé mentalement, mais j'ai pû faire des petites choses...
+
+Le but du TP était de titrer une solution de Cu\up{2+}. Il y avait d'abord une dilution à effectuer (quelques règles de trois, une balance).
+
+Un premier titrage (peu précis) utilisait une pile. On formait une pile Zinc-Cuivre (Zn\up{2+}/Zn et Cu\up{2+}/Cu), avec la solution diluée. On devait donner l'équation de réaction et le sens de réaction théorique, puis comparer avec la mesure de tension expérimentale (les potentiels standards étaient donnés).
+
+Le second titrage était pH-métrique, on versait de la soude HO\up{-} dans le (Cu\up{2+}, SO\dw{4}\up{2-}). Malheureusement on découvre que l'espèce formée n'est pas Cu(OH)\dw{2}, car le volume à l'équivalence n'est pas celui attendu. On demandait de déterminer à quel pH appraitrait le précipité : en effet le Cu\up{2+} n'est pas toujours présent dans la solution car il vient de la dissolution d'un solide. On nous donnait le K° de la dissolution, on calculait la frontière pH au premier grain de solide... Le but est alors de deviner l'équation de réaction qui forme un solide de la forme Cu\dw{x}(SO\dw{4})\dw{y}(HO)\dw{z}.
+
+Au vu de la qualité de mon titrage, je ne saurait dire quelle espèce était réellement formée. Le volume à l'équivalence donnait $\frac{x}{z}$, et la conservation de la charge donnait une deuxième équation. J'ai alors essayé de trouver une solution avec des coefficients petits, mais rien n'était très bon...
+
+Enfin, avec les informations que d'autres auraient pu trouver, on demandait s'il était finalement possible de titrer le Cu\up{2+} par pH-métrie, avec le soucis de la présence ou non de Cu\up{2+} dans la solution aux différents pH je suppose.   : en effet le Cu\up{2+} n'est pas toujours présent dans la solution car il vient de la dissolution d'un solide. On nous donnait le K° de la dissolution, on calculait la frontière pH au premier grain de solide... Le but est alors de deviner l'équation de réaction qui forme un solide de la forme Cu\dw{x}(SO\dw{4})\dw{y}(HO)\dw{z}.
+
+Au vu de la qualité de mon titrage, je ne saurait dire quelle espèce était réellement formée. Le volume à l'équivalence donnait $\frac{x}{z}$, et la conservation de la charge donnait une deuxième équation. J'ai alors essayé de trouver une solution avec des coefficients petits, mais rien n'était très bon...
+
+Enfin, avec les informations que d'autres auraient pu trouver, on demandait s'il était finalement possible de titrer le Cu\up{2+} par pH-métrie, avec le soucis de la présence ou non de Cu\up{2+} dans la solution aux différents pH je suppose.  
+
+\section*{Physique-Chimie I (30 minutes)}
+Le contexte était le laser Méga-Joule : $n=176$ lasers de longueur d'onde $\lambda$ fournissent en un temps $\tau$ un énergie totale $E$ (probablement de l'ordre du Méga-Joule, toutes les valeurs nécessaires étaient données). On donne le diamètre $d$ d'un faisceau laser. Le faisceau laser est une onde plane progressive périodique se propagant selon $u_z$ et polarisée selon $u_y$. Déterminer l'équation aux dérivées partielles vérifiée par le champs $\vec{E}$, et celle vérifiée par $\vec{B}$. En déduire une relation entre $w$, $k$ et $c$. Comment se nomme cette relation ? Calculer le vecteur de Poynting. Avec les données calculer la puissance d'un faisceau laser et déterminer l'amplitude du champ électrique. Déterminer le flux de photons d'un laser (nombre de photons par seconde).
+
+C'était simple. J'ai fait plein de bêtises (comme d'habitude quoi), mais je suis allé suffisament vite pour finir la petite feuille.
+
+\section*{\center{Oraux des Mines}}
+
+\section*{Physique}
+Question de cours (15 minutes de préparation). Trous de Young, avec ce qui affecte le contraste.
+
+Exercice : modèle de J.J. Thomson de l'atome d'hydrogène. L'atome est une sphère homogène de rayon $R$ et de charge $+e$. Un éléctron de charge $-e$ se déplace dans cette sphère. Montrer que le mouvement est plan. Déterminer les équations du mouvement en coordonnées cartésiennes. On donne une longueur d'onde $\lambda_0$ du spectre de l'hydrogène. Faire le lien avec le modèle de Thomson pour déterminer un rayon le rayon $R$. On suppose maintenant la trajectoire circulaire. Montrer que le modèle est équivalent à une superposition de dipoles oscillants, l'un selon $O_x$, l'autre selon $O_y$. Pour un dipole oscillant $p_0cos(\omega t)u_x$, on donne la formule de la puissance rayonnée par ce dipole. Déterminer l'équation différentielle portant sur l'énergie mécanique dans ce modèle. Donner un temps caractéristique. Conclure.
+
+
+Quelques remarques : Pour la question de cours, j'ai retrouvé la formule de l'intensité, et j'ai utilisé le critère semi-quantitatif pour discuter de la cohérence spatiale et temporelle. J'ai même fait des applications numériques pour estimer la largeur maximale de la source, et l'écart en longueur d'onde. Je connaissais l'exercice par coeur... Théorème du moment cinétique pour la planéité du mouvement. Théorème de Gauss sur la sphère. Seconde loi de Newton, l'équa-diff miraculeusement simple en coordonnées cartésiennes. On détermine la fréquence du mouvement et on la lie à la longueur d'onde. En résolvant les équa-diff, on connait le mouvement de l'électron. On constate l'équivalence avec une superposition de dipoles. Théorème énergétique : la variation d'énergie mécanique est l'opposé de la puissance rayonnée. Il se trouve que la puissance rayonnée est proportionnelle à l'énergie mécanique : les deux sont en $r^2$, je n'y croyais pas ! Équa-diff d'ordre 1 sur l'énergie mécanique, l'atome se casse la figure, seule la physique quantique peut nous sortir de l'impasse. Je n'ai pas eu le temps de le dire ça, dommage... faut dire qu'après le match France-Suisse, je n'ai pas dormi beaucoup !
 
 \section*{\center{Divagations parisiennes}}
 
